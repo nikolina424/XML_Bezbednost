@@ -48,7 +48,7 @@ export class NewPostComponent implements OnInit {
     console.log(this.file);
     body.append("location", this.location);
     body.append("caption", this.caption);
-    body.append("userInfoId", "12");
+    body.append("userInfoId", "1");
     // Launch post request
     if(this.validateForm.valid){
       this.postStory.createPostStory(body)

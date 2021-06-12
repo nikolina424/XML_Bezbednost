@@ -13,7 +13,7 @@ const auth_url = environment.auth_url;
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
 
   public login(body: any) : Observable<any>{ 
@@ -35,25 +35,51 @@ export class AuthService {
   
   public getDataFromToken() : any
   {
-    /*let token : any;
+    let token : any;
     let decoded_token : any;
     let result : any;
     token = localStorage.getItem("token");
     decoded_token = this.getDecodedAccessToken(token);
     result = {
-      email : decoded_token.email,
-      id : decoded_token.user_id, 
-      type : decoded_token.user_type
+      userType : token.type
     }
-    return result*/
+    return result
   }
 
   getDecodedAccessToken(token: string): any {
-    /*try {
+    try {
       return jwt_decode(token);
     }
     catch (Error) {
       return null;
-    }*/
+    }
+  }
+
+  checkAdmin() : any {
+    let token : any;
+    let decoded_token : any;
+    token = localStorage.getItem("token");
+    decoded_token = this.getDecodedAccessToken(token);
+    if(token!=null && decoded_token.type != undefined){
+      if(decoded_token.type === "User"){
+        this.router.navigate(['homepage']);
+      }
+    }else{
+      this.router.navigate(['login']);
+    }
+  }
+
+  checkUser(){
+    let token : any;
+    let decoded_token : any;
+    token = localStorage.getItem("token");
+    decoded_token = this.getDecodedAccessToken(token);
+    if(token!=null && decoded_token.type != undefined){
+      if(decoded_token.type === "Administrator"){
+        this.router.navigate(['admin']);
+      }
+    }else{
+      this.router.navigate(['login']);
+    }
   }
 }

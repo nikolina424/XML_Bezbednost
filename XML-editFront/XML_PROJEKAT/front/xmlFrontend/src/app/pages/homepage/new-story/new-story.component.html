@@ -1,0 +1,5 @@
+<form (ngSubmit)="upload()" [formGroup]="form">
+    <input ng-model="file_upload" name="file" type="file" (change)="fileChange($event)" #fileInput>
+    <button type="submit">Submit</button>
+</form> 
+

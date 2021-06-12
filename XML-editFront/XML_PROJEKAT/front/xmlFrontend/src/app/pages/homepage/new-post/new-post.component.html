@@ -1,0 +1,31 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="caption" nzRequired>
+        <span>Caption</span>
+      </nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input caption!">
+        <input nz-input id="caption" formControlName="caption"/>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="location" nzRequired>
+        <span>Location</span>
+      </nz-form-label>
+      <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your location!">
+        <input nz-input id="location" formControlName="location" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="file" nzRequired>
+            <span>Content</span>
+          </nz-form-label>
+          <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your content!">
+            <input ng-model="file_upload" name="file" type="file" id="file" (change)="fileChange($event)" #fileInput formControlName="file" />
+          </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-row class="register-area">
+      <nz-form-control [nzSpan]="14" [nzOffset]="6">
+        <button nz-button nzType="primary" >Post</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>

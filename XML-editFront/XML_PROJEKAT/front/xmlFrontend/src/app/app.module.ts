@@ -1,3 +1,6 @@
+import { ViewVerificationReqComponent } from './pages/admin-homepage/view-verification-req/view-verification-req.component';
+import { NewVerificationRequestComponent } from './pages/homepage/new-verification-request/new-verification-request.component';
+import { AdminHomepageComponent } from './pages/admin-homepage/admin-homepage.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
@@ -19,6 +22,7 @@ import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 import { ToastrModule } from 'ngx-toastr';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NewPostComponent } from './pages/new-post/new-post.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 registerLocaleData(en);
 
@@ -30,7 +34,11 @@ registerLocaleData(en);
     ChangePasswordComponent,
     ResetPasswordComponent,
     HomePageComponent,
-    NewPostComponent
+    NewPostComponent,
+    HomepageComponent,
+    AdminHomepageComponent,
+    NewVerificationRequestComponent,
+    ViewVerificationReqComponent
   ],
   imports: [
     BrowserModule,

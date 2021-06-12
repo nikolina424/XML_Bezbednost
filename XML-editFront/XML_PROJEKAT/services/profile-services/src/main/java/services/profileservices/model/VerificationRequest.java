@@ -20,5 +20,12 @@ public class VerificationRequest {
     private String name;
     private String surname;
     private ProfileCategory category;
-    private String officialDocument; //TREBA BITI SLIKA
+    private int officialDocument; //TREBA BITI SLIKA
+
+    public VerificationRequest(String name, String surname, ProfileCategory category, int officialDocument){
+        this.name=name;
+        this.surname = surname;
+        this.category = category;
+        this.officialDocument = officialDocument;
+    }
 }

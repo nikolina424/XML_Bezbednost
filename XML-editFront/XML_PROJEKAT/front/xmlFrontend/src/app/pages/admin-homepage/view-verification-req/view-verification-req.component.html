@@ -1,0 +1,17 @@
+<div class="center">
+    <nz-table #basicTable nzBordered nzTitle="List of verifications" [nzData]="listOfData">
+        <thead>
+          <tr>
+            
+            <th *ngFor="let column of listOfColumn">{{ column.title }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td>{{data.name}}</td>
+            <td>{{data.surname}}</td>
+            <td>{{data.category}}</td>
+          </tr>
+        </tbody>
+    </nz-table>
+    </div>
