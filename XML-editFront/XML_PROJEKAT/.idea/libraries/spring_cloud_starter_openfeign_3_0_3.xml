@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="spring-cloud-starter-openfeign-3.0.3">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/Downloads/spring-cloud-starter-openfeign-3.0.3.jar!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/spring-cloud-starter-openfeign-3.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

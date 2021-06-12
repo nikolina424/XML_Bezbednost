@@ -1,12 +1,12 @@
 package services.authservices.service.implementation;
 
-import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import services.authservices.client.ProfileClient;
 import services.authservices.dto.ChangePasswordDTO;
 import services.authservices.dto.RequestRestartDTO;
 import services.authservices.dto.RestartPasswordDTO;
@@ -31,12 +31,14 @@ public class AuthService implements IAuthService, UserDetailsService {
     private final TokenUtils token;
     private final IEmailService emailService;
     private final Logger logger = LoggerFactory.getLogger(AuthService.class);
+    private final ProfileClient profileClient;
 
-    public AuthService(AuthRepository authRepository, PasswordEncoder passwordEncoder, TokenUtils token, IEmailService emailService) {
+    public AuthService(AuthRepository authRepository, PasswordEncoder passwordEncoder, TokenUtils token, IEmailService emailService, ProfileClient profileClient) {
         this.authRepository = authRepository;
         this.passwordEncoder = passwordEncoder;
         this.token = token;
         this.emailService = emailService;
+        this.profileClient = profileClient;
     }
 
     @Override
@@ -76,6 +78,8 @@ public class AuthService implements IAuthService, UserDetailsService {
         registrationDTO.setPassword(passwordEncoder.encode(registrationDTO.getPassword()));
         UserInfo userInfo = new UserInfo(registrationDTO);
         authRepository.save(userInfo);
+        UserInfo ui = authRepository.findOneByUsername(userInfo.getUsername());
+        profileClient.createProfile(ui.getId());
         logger.info("User " + registrationDTO.getUsername() + " has successfully registered");
         return true;
     }
@@ -124,6 +128,12 @@ public class AuthService implements IAuthService, UserDetailsService {
 
     public UserInfo findByUsername(String username) {
         return authRepository.findOneByUsername(username);
+    }
+
+    @Override
+    public int getByUsername(String username) {
+        UserInfo ui = authRepository.findOneByUsername(username);
+        return ui.getId();
     }
 
     private void checkSQLInjection(RegistrationDTO registrationDTO)throws GeneralException {

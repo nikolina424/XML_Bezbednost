@@ -55,4 +55,13 @@ public class AuthController {
     public void requestRestartPassword(@RequestBody RequestRestartDTO request){
         authService.requestRestartPassword(request);
     }
+
+    @GetMapping("/getUserInfoId/{username}")
+    public ResponseEntity getByUsername(@PathVariable String username){
+        try{
+            return new ResponseEntity(authService.getByUsername(username), HttpStatus.OK);
+        }catch(Exception e){
+            return new ResponseEntity(HttpStatus.UNAUTHORIZED);
+        }
+    }
 }

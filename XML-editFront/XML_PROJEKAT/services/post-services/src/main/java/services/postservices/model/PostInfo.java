@@ -24,14 +24,13 @@ public class PostInfo {
     @ElementCollection
     @CollectionTable(name="Post_Pictures", joinColumns=@JoinColumn(name="PostInfo_ID"))
     @Column(name="picture")
-    private List<String> picture;
+    private List<Integer> pictureIds;
     @ElementCollection
     @CollectionTable(name="Post_Videos", joinColumns=@JoinColumn(name="PostInfo_ID"))
     @Column(name="video")
-    private List<String> video;
+    private List<Integer> videoIds;
     private int report;
-    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    private Location location;
+    private String location;
     @ElementCollection
     @CollectionTable(name="PostInfo_Tagged", joinColumns=@JoinColumn(name="Post_ID"))
     @Column(name="tag")

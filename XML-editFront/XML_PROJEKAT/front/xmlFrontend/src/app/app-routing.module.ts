@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
+import { NewPostComponent } from './pages/new-post/new-post.component';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo:'login'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent},
   { path: 'home-page', component: HomePageComponent, children: [
     { path: 'reset-password/:id', component: ResetPasswordComponent},
-    { path: 'change-password/:id', component: ChangePasswordComponent}
+    { path: 'change-password/:id', component: ChangePasswordComponent},
+    { path: 'new-post',component:NewPostComponent}
   ]}
 
 ];

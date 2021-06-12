@@ -14,4 +14,5 @@ public interface IAuthService {
     void changePasswordPatient(Long id, ChangePasswordDTO request);
     void requestRestartPassword(RequestRestartDTO request);
     void restartPassword(Long id, RestartPasswordDTO request);
+    int getByUsername(String username);
 }

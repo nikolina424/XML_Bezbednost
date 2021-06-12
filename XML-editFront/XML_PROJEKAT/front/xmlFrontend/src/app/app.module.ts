@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 import { ToastrModule } from 'ngx-toastr';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { NewPostComponent } from './pages/new-post/new-post.component';
 
 registerLocaleData(en);
 
@@ -28,7 +29,8 @@ registerLocaleData(en);
     LoginComponent,
     ChangePasswordComponent,
     ResetPasswordComponent,
-    HomePageComponent
+    HomePageComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
