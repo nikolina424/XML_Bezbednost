@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="campaign-services" />
+        <module name="profile-services" />
+        <module name="XML_PROJEKAT" />
+        <module name="post-services" />
+        <module name="agent-app-services" />
+        <module name="notification-services" />
+        <module name="auth-services" />
+        <module name="picture-video-services" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="agent-app-services" options="-parameters" />
+      <module name="auth-services" options="-parameters" />
+      <module name="campaign-services" options="-parameters" />
+      <module name="notification-services" options="-parameters" />
+      <module name="picture-video-services" options="-parameters" />
+      <module name="post-services" options="-parameters" />
+      <module name="profile-services" options="-parameters" />
+    </option>
+  </component>
+</project>

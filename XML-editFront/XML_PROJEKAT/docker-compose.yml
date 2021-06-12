@@ -1,0 +1,90 @@
+version: "3.8"
+services:
+
+  gateway:
+    image: nginx:1.19.8-alpine
+#    build:
+#      context: ./services/Gateway
+#      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - backend
+    volumes:
+      - ./services/Gateway/nginx.conf:/etc/nginx/nginx.conf
+      - ./services/Gateway/api_gateway.conf:/etc/nginx/api_gateway.conf
+
+  agent-app-services:
+    image: agent-app-services
+    build:
+      context: ./services/agent-app-services
+        dockerfile: Dockerfile
+      ports:
+        - 9000:8080
+      networks:
+        - backend
+
+  campaign-services:
+    image: campaign-services
+    build:
+      context: ./services/campaign-services
+        dockerfile: Dockerfile
+      ports:
+        - 9000:8080
+      networks:
+        - backend
+
+  notification-services:
+    image: notification-services
+    build:
+      context: ./services/notification-services
+        dockerfile: Dockerfile
+      ports:
+        - 9000:8080
+      networks:
+        - backend
+
+  picture-video-services:
+    image: picture-video-services
+    build:
+      context: ./services/picture-video-services
+        dockerfile: Dockerfile
+      ports:
+        - 9000:8080
+      networks:
+        - backend
+
+  auth-services:
+    image: auth-services
+    build:
+      context: ./services/auth-services
+      dockerfile: Dockerfile
+    ports:
+      - 9000:8080
+    networks:
+      - backend
+
+  profile-services:
+    image: profile-services
+    build:
+      context: ./services/profile-services
+      dockerfile: Dockerfile
+    ports:
+      - 9001:8080
+    networks:
+      - backend
+
+  post-services:
+    image: post-services
+    build:
+      context: ./services/post-services
+      dockerfile: Dockerfile
+    ports:
+      - 9002:8080
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: networks_name
+    driver: bridge
