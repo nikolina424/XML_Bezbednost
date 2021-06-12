@@ -31,6 +31,7 @@ public class UserInfo implements UserDetails {
     private String phone;
     private Gender gender;
     private LocalDate dateOfBirth;
+    private int loginCounter;
 
     public UserInfo(RegistrationDTO registrationDTO){
         this.username = registrationDTO.getUsername();

@@ -37,6 +37,9 @@ export class LoginComponent implements OnInit {
       }
 
       this.authService.login(body).subscribe( data => {
+        if(data == null)
+        this.toastr.error("Bad login credentials");
+        else
         this.toastr.success("Logged in");
       })
     }    

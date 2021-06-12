@@ -51,7 +51,7 @@ public class AttackController {
     @PostMapping("/phoneNumber")
     //@PreAuthorize("hasAuthority('REGISTER')")
     public ResponseEntity<?> validatePhone(@RequestBody String input){
-        return new ResponseEntity<>(attackService.escaping(input), HttpStatus.OK);
+        return new ResponseEntity<>(attackService.phoneNumberValidation(input), HttpStatus.OK);
     }
 
     @PostMapping("/date")

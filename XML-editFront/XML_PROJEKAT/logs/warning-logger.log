@@ -1,0 +1,4 @@
+2021-06-12 17:08:15,458 WARN services.authservices.service.implementation.AuthService [http-nio-8090-exec-2] User has entered bad login credentials
+2021-06-12 17:11:33,270 WARN services.authservices.service.implementation.AuthService [http-nio-8090-exec-8] User has entered bad login credentials
+2021-06-12 17:28:14,851 WARN services.authservices.service.implementation.AuthService [http-nio-8090-exec-3] User maja has entered bad password 5 times
+2021-06-12 17:28:27,446 WARN services.authservices.service.implementation.AuthService [http-nio-8090-exec-5] User maja has entered bad password 6 times

@@ -1,0 +1,5 @@
+2021-06-12 17:31:43,674 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-1] User maja has successfully logged in
+2021-06-12 17:31:44,611 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-2] User maja has successfully logged in
+2021-06-12 17:31:45,380 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-3] User maja has successfully logged in
+2021-06-12 17:31:45,993 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-6] User maja has successfully logged in
+2021-06-12 17:31:46,475 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-7] User maja has successfully logged in

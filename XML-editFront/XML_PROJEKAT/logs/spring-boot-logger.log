@@ -1,0 +1,430 @@
+2021-06-12 16:00:05,399 WARN org.springframework.core.log.CompositeLog [background-preinit] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-12 16:00:09,240 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-12 16:00:09,456 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 178 ms. Found 1 JPA repository interfaces.
+2021-06-12 16:00:10,796 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3f4f5330' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 16:00:10,808 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 16:00:11,985 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2021-06-12 16:00:12,025 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2021-06-12 16:00:12,026 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-06-12 16:00:12,027 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-12 16:00:12,364 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-06-12 16:00:12,365 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7103 ms
+2021-06-12 16:00:13,067 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-12 16:00:13,228 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-12 16:00:13,669 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-12 16:00:13,988 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-06-12 16:00:15,676 ERROR com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1325)
+	at services.authservices.AuthServicesApplication.main(AuthServicesApplication.java:10)
+2021-06-12 16:00:15,678 WARN org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [main] HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1325)
+	at services.authservices.AuthServicesApplication.main(AuthServicesApplication.java:10)
+2021-06-12 16:00:15,684 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-06-12 16:00:15,685 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-06-12 16:00:15,691 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2021-06-12 16:00:15,709 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-12 16:00:15,774 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1325)
+	at services.authservices.AuthServicesApplication.main(AuthServicesApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 common frames omitted
+2021-06-12 16:03:12,161 WARN org.springframework.core.log.CompositeLog [background-preinit] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-12 16:03:13,267 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-12 16:03:13,405 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interfaces.
+2021-06-12 16:03:13,972 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@13741d5a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 16:03:13,980 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 16:03:14,565 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2021-06-12 16:03:14,582 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2021-06-12 16:03:14,587 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-06-12 16:03:14,587 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-12 16:03:14,814 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-06-12 16:03:14,814 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2985 ms
+2021-06-12 16:03:15,145 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-12 16:03:15,234 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-12 16:03:15,459 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-12 16:03:15,618 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-06-12 16:03:16,054 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-06-12 16:03:16,104 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-06-12 16:03:17,991 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] SQL Warning Code: 0, SQLState: 00000
+2021-06-12 16:03:17,991 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] relation "authority_permission" does not exist, skipping
+2021-06-12 16:03:17,996 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] SQL Warning Code: 0, SQLState: 00000
+2021-06-12 16:03:17,996 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] relation "authority_permission" does not exist, skipping
+2021-06-12 16:03:17,996 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] SQL Warning Code: 0, SQLState: 00000
+2021-06-12 16:03:17,996 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] relation "user_authority" does not exist, skipping
+2021-06-12 16:03:18,001 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] SQL Warning Code: 0, SQLState: 00000
+2021-06-12 16:03:18,001 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] relation "user_authority" does not exist, skipping
+2021-06-12 16:03:18,006 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] SQL Warning Code: 0, SQLState: 00000
+2021-06-12 16:03:18,006 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] table "authority" does not exist, skipping
+2021-06-12 16:03:18,011 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] SQL Warning Code: 0, SQLState: 00000
+2021-06-12 16:03:18,011 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] table "permission" does not exist, skipping
+2021-06-12 16:03:18,011 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] SQL Warning Code: 0, SQLState: 00000
+2021-06-12 16:03:18,011 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] table "authority_permission" does not exist, skipping
+2021-06-12 16:03:18,016 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] SQL Warning Code: 0, SQLState: 00000
+2021-06-12 16:03:18,016 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper$StandardWarningHandler [main] table "user_authority" does not exist, skipping
+2021-06-12 16:03:18,270 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-12 16:03:18,283 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-12 16:03:18,349 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-12 16:03:18,440 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-12 16:03:19,712 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth/**', POST] with []
+2021-06-12 16:03:19,713 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth', PUT] with []
+2021-06-12 16:03:19,713 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/', GET] with []
+2021-06-12 16:03:19,714 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/webjars/**', GET] with []
+2021-06-12 16:03:19,714 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/*.html', GET] with []
+2021-06-12 16:03:19,714 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/favicon.ico', GET] with []
+2021-06-12 16:03:19,715 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.html', GET] with []
+2021-06-12 16:03:19,715 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.css', GET] with []
+2021-06-12 16:03:19,715 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.js', GET] with []
+2021-06-12 16:03:19,715 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/assets/**', GET] with []
+2021-06-12 16:03:19,763 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@eee26bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@64d42d3d, org.springframework.security.web.header.HeaderWriterFilter@3b80bb63, org.springframework.web.filter.CorsFilter@3d1c8f35, org.springframework.security.web.authentication.logout.LogoutFilter@463a1f47, services.authservices.security.TokenAuthenticationFilter@498f5728, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d5e0bf0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a262980, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39451d92, org.springframework.security.web.session.SessionManagementFilter@3435a4e5, org.springframework.security.web.access.ExceptionTranslationFilter@61555218, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@552b15f6]
+2021-06-12 16:03:19,839 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2021-06-12 16:03:19,881 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2021-06-12 16:03:19,901 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state LivenessState changed to CORRECT
+2021-06-12 16:03:19,903 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-12 16:50:34,587 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-12 16:50:34,903 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-06-12 16:50:36,376 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 1473 ms
+2021-06-12 16:53:45,822 WARN org.springframework.core.log.CompositeLog [background-preinit] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-12 16:53:48,161 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-12 16:53:48,401 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 219 ms. Found 1 JPA repository interfaces.
+2021-06-12 16:53:49,186 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5527b211' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 16:53:49,197 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 16:53:50,370 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2021-06-12 16:53:50,394 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2021-06-12 16:53:50,395 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-06-12 16:53:50,396 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-12 16:53:50,663 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-06-12 16:53:50,666 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5144 ms
+2021-06-12 16:53:51,036 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-12 16:53:51,140 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-12 16:53:51,443 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-12 16:53:51,705 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-06-12 16:53:52,232 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-06-12 16:53:52,400 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-06-12 16:53:55,726 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-12 16:53:55,738 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-12 16:53:55,806 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-12 16:53:55,884 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-12 16:53:57,536 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth/**', POST] with []
+2021-06-12 16:53:57,537 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth/registration', POST] with []
+2021-06-12 16:53:57,537 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth', PUT] with []
+2021-06-12 16:53:57,538 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/', GET] with []
+2021-06-12 16:53:57,538 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/webjars/**', GET] with []
+2021-06-12 16:53:57,539 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/*.html', GET] with []
+2021-06-12 16:53:57,539 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/favicon.ico', GET] with []
+2021-06-12 16:53:57,539 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.html', GET] with []
+2021-06-12 16:53:57,539 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.css', GET] with []
+2021-06-12 16:53:57,540 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.js', GET] with []
+2021-06-12 16:53:57,540 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/assets/**', GET] with []
+2021-06-12 16:53:57,611 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39451d92, org.springframework.security.web.context.SecurityContextPersistenceFilter@166d576b, org.springframework.security.web.header.HeaderWriterFilter@38d308e7, org.springframework.web.filter.CorsFilter@46610fc9, org.springframework.security.web.authentication.logout.LogoutFilter@7e366c6f, services.authservices.security.TokenAuthenticationFilter@1fdd5517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b407336, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@394e504d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cd877d3, org.springframework.security.web.session.SessionManagementFilter@24558113, org.springframework.security.web.access.ExceptionTranslationFilter@17ebbf1e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ec06e97]
+2021-06-12 16:53:57,771 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2021-06-12 16:53:57,851 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2021-06-12 16:53:57,877 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state LivenessState changed to CORRECT
+2021-06-12 16:53:57,881 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-12 16:56:05,448 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-12 16:56:05,449 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-06-12 16:56:05,452 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 3 ms
+2021-06-12 17:02:44,086 WARN org.springframework.core.log.CompositeLog [background-preinit] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-12 17:02:46,320 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-12 17:02:46,486 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 149 ms. Found 1 JPA repository interfaces.
+2021-06-12 17:02:47,107 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@26221bad' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 17:02:47,117 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 17:02:47,853 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2021-06-12 17:02:47,889 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2021-06-12 17:02:47,890 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-06-12 17:02:47,892 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-12 17:02:48,207 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-06-12 17:02:48,209 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4375 ms
+2021-06-12 17:02:48,655 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-12 17:02:48,782 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-12 17:02:49,084 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-12 17:02:49,316 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-06-12 17:02:49,758 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-06-12 17:02:49,818 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-06-12 17:02:51,810 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-12 17:02:51,820 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-12 17:02:51,888 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-12 17:02:51,988 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-12 17:02:53,541 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth/**', POST] with []
+2021-06-12 17:02:53,542 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/attack/**', POST] with []
+2021-06-12 17:02:53,543 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth', PUT] with []
+2021-06-12 17:02:53,544 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/', GET] with []
+2021-06-12 17:02:53,544 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/webjars/**', GET] with []
+2021-06-12 17:02:53,545 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/*.html', GET] with []
+2021-06-12 17:02:53,545 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/favicon.ico', GET] with []
+2021-06-12 17:02:53,546 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.html', GET] with []
+2021-06-12 17:02:53,547 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.css', GET] with []
+2021-06-12 17:02:53,547 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.js', GET] with []
+2021-06-12 17:02:53,547 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/assets/**', GET] with []
+2021-06-12 17:02:53,610 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ac1161f, org.springframework.security.web.context.SecurityContextPersistenceFilter@475eb4fd, org.springframework.security.web.header.HeaderWriterFilter@3ff3275b, org.springframework.web.filter.CorsFilter@4f5bfbca, org.springframework.security.web.authentication.logout.LogoutFilter@5b407336, services.authservices.security.TokenAuthenticationFilter@552b15f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cb376a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c8afba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cd6d147, org.springframework.security.web.session.SessionManagementFilter@5bddd141, org.springframework.security.web.access.ExceptionTranslationFilter@2a525f88, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@509e4902]
+2021-06-12 17:02:53,689 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2021-06-12 17:02:53,737 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2021-06-12 17:02:53,761 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state LivenessState changed to CORRECT
+2021-06-12 17:02:53,764 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-12 17:03:58,218 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-12 17:03:58,219 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-06-12 17:03:58,226 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 6 ms
+2021-06-12 17:24:23,436 WARN org.springframework.core.log.CompositeLog [background-preinit] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-12 17:24:25,190 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-12 17:24:25,351 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 142 ms. Found 1 JPA repository interfaces.
+2021-06-12 17:24:26,061 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@13741d5a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 17:24:26,074 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 17:24:26,781 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2021-06-12 17:24:26,800 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2021-06-12 17:24:26,803 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-06-12 17:24:26,804 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-12 17:24:27,042 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-06-12 17:24:27,044 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3717 ms
+2021-06-12 17:24:27,427 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-12 17:24:27,587 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-12 17:24:27,864 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-12 17:24:28,070 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-06-12 17:24:28,425 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-06-12 17:24:28,476 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-06-12 17:24:30,587 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-12 17:24:30,605 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-12 17:24:30,667 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-12 17:24:30,790 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-12 17:24:32,181 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth/**', POST] with []
+2021-06-12 17:24:32,182 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/attack/**', POST] with []
+2021-06-12 17:24:32,184 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth', PUT] with []
+2021-06-12 17:24:32,184 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/', GET] with []
+2021-06-12 17:24:32,185 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/webjars/**', GET] with []
+2021-06-12 17:24:32,185 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/*.html', GET] with []
+2021-06-12 17:24:32,185 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/favicon.ico', GET] with []
+2021-06-12 17:24:32,186 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.html', GET] with []
+2021-06-12 17:24:32,187 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.css', GET] with []
+2021-06-12 17:24:32,187 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.js', GET] with []
+2021-06-12 17:24:32,187 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/assets/**', GET] with []
+2021-06-12 17:24:32,252 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48cbe1c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ea0161f, org.springframework.security.web.header.HeaderWriterFilter@4c8afba, org.springframework.web.filter.CorsFilter@67e628b, org.springframework.security.web.authentication.logout.LogoutFilter@426a4301, services.authservices.security.TokenAuthenticationFilter@578c99ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75d402d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24558113, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ca30886, org.springframework.security.web.session.SessionManagementFilter@3f2ab6ec, org.springframework.security.web.access.ExceptionTranslationFilter@447630c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3fc14dc0]
+2021-06-12 17:24:32,323 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2021-06-12 17:24:32,386 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2021-06-12 17:24:32,430 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state LivenessState changed to CORRECT
+2021-06-12 17:24:32,432 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-12 17:27:22,066 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-12 17:27:22,067 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-06-12 17:27:22,072 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 4 ms
+2021-06-12 17:29:26,876 WARN org.springframework.core.log.CompositeLog [background-preinit] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-12 17:29:28,512 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-12 17:29:28,661 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 131 ms. Found 1 JPA repository interfaces.
+2021-06-12 17:29:29,304 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@42b6d0cc' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 17:29:29,315 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 17:29:29,965 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2021-06-12 17:29:29,983 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2021-06-12 17:29:29,985 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-06-12 17:29:29,985 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-12 17:29:30,195 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-06-12 17:29:30,197 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3406 ms
+2021-06-12 17:29:30,595 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-12 17:29:30,721 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-12 17:29:31,020 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-12 17:29:31,261 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-06-12 17:29:31,734 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-06-12 17:29:31,788 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-06-12 17:29:34,360 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-12 17:29:34,380 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-12 17:29:34,454 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-12 17:29:34,556 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-12 17:29:36,800 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth/**', POST] with []
+2021-06-12 17:29:36,801 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/attack/**', POST] with []
+2021-06-12 17:29:36,802 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth', PUT] with []
+2021-06-12 17:29:36,803 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/', GET] with []
+2021-06-12 17:29:36,803 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/webjars/**', GET] with []
+2021-06-12 17:29:36,804 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/*.html', GET] with []
+2021-06-12 17:29:36,805 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/favicon.ico', GET] with []
+2021-06-12 17:29:36,806 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.html', GET] with []
+2021-06-12 17:29:36,806 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.css', GET] with []
+2021-06-12 17:29:36,806 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.js', GET] with []
+2021-06-12 17:29:36,807 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/assets/**', GET] with []
+2021-06-12 17:29:36,890 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b764e66, org.springframework.security.web.context.SecurityContextPersistenceFilter@38d308e7, org.springframework.security.web.header.HeaderWriterFilter@3cb376a3, org.springframework.web.filter.CorsFilter@38834000, org.springframework.security.web.authentication.logout.LogoutFilter@7d4135c9, services.authservices.security.TokenAuthenticationFilter@5b72b13a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c6fabba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75d402d4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63e648a0, org.springframework.security.web.session.SessionManagementFilter@17ebbf1e, org.springframework.security.web.access.ExceptionTranslationFilter@475eb4fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b529d42]
+2021-06-12 17:29:36,982 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2021-06-12 17:29:37,051 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2021-06-12 17:29:37,079 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state LivenessState changed to CORRECT
+2021-06-12 17:29:37,082 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-12 17:29:52,090 WARN org.springframework.core.log.CompositeLog [background-preinit] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-12 17:29:53,363 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-12 17:29:53,504 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interfaces.
+2021-06-12 17:29:54,118 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5c448433' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 17:29:54,126 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-12 17:29:54,772 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8090 (http)
+2021-06-12 17:29:54,786 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8090"]
+2021-06-12 17:29:54,787 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-06-12 17:29:54,788 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-12 17:29:54,978 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-06-12 17:29:54,978 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3127 ms
+2021-06-12 17:29:55,442 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-12 17:29:55,563 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-06-12 17:29:55,864 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-12 17:29:56,113 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-06-12 17:29:56,522 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-06-12 17:29:56,571 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2021-06-12 17:29:58,733 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-12 17:29:58,749 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-12 17:29:58,817 WARN org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-12 17:29:58,933 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-12 17:30:00,610 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth/**', POST] with []
+2021-06-12 17:30:00,612 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/attack/**', POST] with []
+2021-06-12 17:30:00,612 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/api/auth', PUT] with []
+2021-06-12 17:30:00,615 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/', GET] with []
+2021-06-12 17:30:00,615 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/webjars/**', GET] with []
+2021-06-12 17:30:00,616 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/*.html', GET] with []
+2021-06-12 17:30:00,616 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/favicon.ico', GET] with []
+2021-06-12 17:30:00,617 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.html', GET] with []
+2021-06-12 17:30:00,617 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.css', GET] with []
+2021-06-12 17:30:00,617 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/**/*.js', GET] with []
+2021-06-12 17:30:00,618 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure Ant [pattern='/assets/**', GET] with []
+2021-06-12 17:30:00,687 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47224d5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@6442cf3e, org.springframework.security.web.header.HeaderWriterFilter@c3ca482, org.springframework.web.filter.CorsFilter@7e366c6f, org.springframework.security.web.authentication.logout.LogoutFilter@3cb376a3, services.authservices.security.TokenAuthenticationFilter@68e094c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@786cc1df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58720eb9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@243162b1, org.springframework.security.web.session.SessionManagementFilter@7b4c793b, org.springframework.security.web.access.ExceptionTranslationFilter@6cb417fc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@394e504d]
+2021-06-12 17:30:00,777 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8090"]
+2021-06-12 17:30:00,900 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8090 (http) with context path ''
+2021-06-12 17:30:00,936 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state LivenessState changed to CORRECT
+2021-06-12 17:30:00,938 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-12 17:30:53,252 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-12 17:30:53,253 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-06-12 17:30:53,255 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 2 ms
