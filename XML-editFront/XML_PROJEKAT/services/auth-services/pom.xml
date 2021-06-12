@@ -60,6 +60,13 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.owasp/dependency-check-maven -->
+		<dependency>
+			<groupId>org.owasp</groupId>
+			<artifactId>dependency-check-maven</artifactId>
+			<version>5.3.2</version>
+		</dependency>
+
 
 		<!--Mail-->
 		<dependency>
@@ -93,6 +100,18 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.owasp</groupId>
+				<artifactId>dependency-check-maven</artifactId>
+				<version>5.3.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
