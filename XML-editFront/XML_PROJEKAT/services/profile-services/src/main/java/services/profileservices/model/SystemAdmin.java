@@ -19,4 +19,5 @@ public class SystemAdmin {
     private int id;
     //@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     //private UserInfo userInfo;
+    private int userInfoId;
 }

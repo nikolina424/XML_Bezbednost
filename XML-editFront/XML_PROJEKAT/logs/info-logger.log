@@ -1,2 +1,5 @@
 2021-06-13 00:01:35,997 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-3] User admin has successfully logged in
 2021-06-13 00:10:15,414 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-8] User admin has successfully logged in
+2021-06-13 00:19:50,469 INFO org.springframework.boot.StartupInfoLogger [main] Starting AuthServicesApplication using Java 16.0.1 on DESKTOP-LLP7IJA with PID 3816 (C:\Users\Vuk\Desktop\XML_Bezbednost\XML-editFront\XML_PROJEKAT\services\auth-services\target\classes started by Vuk in C:\Users\Vuk\Desktop\XML_Bezbednost\XML-editFront\XML_PROJEKAT)
+2021-06-13 00:19:50,484 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 00:20:09,984 INFO org.springframework.boot.StartupInfoLogger [main] Started AuthServicesApplication in 21.01 seconds (JVM running for 22.31)

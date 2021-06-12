@@ -32,6 +32,7 @@ public class UserInfo implements UserDetails {
     private Gender gender;
     private LocalDate dateOfBirth;
     private int loginCounter;
+    private UserType userType;
 
     public UserInfo(RegistrationDTO registrationDTO){
         this.username = registrationDTO.getUsername();
@@ -46,6 +47,7 @@ public class UserInfo implements UserDetails {
             this.gender = Gender.Female;
         else
             this.gender = Gender.NonBinary;
+        this.userType = UserType.User;
     }
 
     @Override

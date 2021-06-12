@@ -1,0 +1,29 @@
+<nz-layout>
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <div class="logo"></div>
+        <ul nz-menu nzTheme="dark" nzMode="inline">
+              <li nz-menu-item (click)="ViewVerificationRequest()">
+                <i nz-icon nzType="file" nzTheme="outline"></i>
+                <span>View verification requests</span>
+              </li>
+        </ul>
+        <ul nz-menu nzTheme="dark" nzMode="inline">
+          <li nz-menu-item (click)="logout()">
+            <i nz-icon nzType="file" nzTheme="outline"></i>
+            <span>Logout</span>
+          </li>
+    </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header>
+          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" (click)="isCollapsed = !isCollapsed"></i>
+        </nz-header>
+        <nz-content>
+          <div class="inner-content">
+            <nz-breadcrumb>
+            </nz-breadcrumb>
+            <router-outlet></router-outlet>
+          </div>
+        </nz-content>
+      </nz-layout>
+</nz-layout>

@@ -1,0 +1,13 @@
+2021-06-12 20:45:51,508 INFO org.springframework.boot.StartupInfoLogger [main] Started AuthServicesApplication in 11.148 seconds (JVM running for 12.199)
+2021-06-12 20:54:40,880 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-4] User admin2 has successfully registered
+2021-06-12 20:54:58,021 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-7] User admin2 has successfully logged in
+2021-06-12 22:33:58,339 INFO org.springframework.boot.StartupInfoLogger [main] Starting AuthServicesApplication using Java 16.0.1 on DESKTOP-LLP7IJA with PID 42808 (C:\Users\Vuk\Desktop\XML_Bezbednost\XML-editFront\XML_PROJEKAT\services\auth-services\target\classes started by Vuk in C:\Users\Vuk\Desktop\XML_Bezbednost\XML-editFront\XML_PROJEKAT)
+2021-06-12 22:33:58,353 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-06-12 22:34:13,958 INFO org.springframework.boot.StartupInfoLogger [main] Started AuthServicesApplication in 18.635 seconds (JVM running for 21.158)
+2021-06-12 22:45:39,346 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-7] User admin has successfully registered
+2021-06-12 22:45:56,748 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-10] User admin has successfully logged in
+2021-06-12 23:41:40,092 INFO org.springframework.boot.StartupInfoLogger [main] Starting AuthServicesApplication using Java 16.0.1 on DESKTOP-LLP7IJA with PID 37840 (C:\Users\Vuk\Desktop\XML_Bezbednost\XML-editFront\XML_PROJEKAT\services\auth-services\target\classes started by Vuk in C:\Users\Vuk\Desktop\XML_Bezbednost\XML-editFront\XML_PROJEKAT)
+2021-06-12 23:41:40,103 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-06-12 23:41:57,436 INFO org.springframework.boot.StartupInfoLogger [main] Started AuthServicesApplication in 19.932 seconds (JVM running for 21.339)
+2021-06-12 23:59:38,951 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-6] User admin has successfully registered
+2021-06-12 23:59:47,983 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-9] User admin has successfully logged in

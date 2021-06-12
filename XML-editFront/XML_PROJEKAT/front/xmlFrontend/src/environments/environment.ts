@@ -12,6 +12,7 @@ export const environment = {
   image_url: 'http://localhost:8120/image',
   post_url: 'http://localhost:8130/post',
   story_url: 'http://localhost:8130/story',
+  verificationRequest_url: 'http://localhost:8140/verificationRequest',
   
 };
 
