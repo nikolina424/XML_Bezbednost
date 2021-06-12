@@ -1,1 +1,2 @@
 2021-06-13 00:01:35,997 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-3] User admin has successfully logged in
+2021-06-13 00:10:15,414 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-8] User admin has successfully logged in

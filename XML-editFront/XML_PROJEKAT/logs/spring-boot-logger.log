@@ -953,3 +953,4 @@ Caused by: java.lang.ClassNotFoundException: org.springframework.cloud.context.n
 2021-06-12 23:41:57,454 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
 2021-06-12 23:59:37,029 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-06-12 23:59:37,039 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-06-12 23:59:37,125 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 85 ms
