@@ -1,11 +1,2 @@
-2021-06-12 17:31:43,674 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-1] User maja has successfully logged in
-2021-06-12 17:31:44,611 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-2] User maja has successfully logged in
-2021-06-12 17:31:45,380 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-3] User maja has successfully logged in
-2021-06-12 17:31:45,993 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-6] User maja has successfully logged in
-2021-06-12 17:31:46,475 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-7] User maja has successfully logged in
-2021-06-12 18:49:06,673 INFO org.springframework.boot.StartupInfoLogger [main] Starting AuthServicesApplication using Java 15.0.2 on MajaComp with PID 2776 (C:\Users\maja.adm\Desktop\Bezbednost_xml\XML_Bezbednost\XML-editFront\XML_PROJEKAT\services\auth-services\target\classes started by maja.adm in C:\Users\maja.adm\Desktop\Bezbednost_xml\XML_Bezbednost\XML-editFront\XML_PROJEKAT)
-2021-06-12 18:49:06,680 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2021-06-12 18:53:21,355 INFO org.springframework.boot.StartupInfoLogger [main] Starting AuthServicesApplication using Java 15.0.2 on MajaComp with PID 6736 (C:\Users\maja.adm\Desktop\Bezbednost_xml\XML_Bezbednost\XML-editFront\XML_PROJEKAT\services\auth-services\target\classes started by maja.adm in C:\Users\maja.adm\Desktop\Bezbednost_xml\XML_Bezbednost\XML-editFront\XML_PROJEKAT)
-2021-06-12 18:53:21,362 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2021-06-12 19:10:03,216 INFO org.springframework.boot.StartupInfoLogger [main] Starting AuthServicesApplication using Java 15.0.2 on MajaComp with PID 4652 (C:\Users\maja.adm\Desktop\Bezbednost_xml\XML_Bezbednost\XML-editFront\XML_PROJEKAT\services\auth-services\target\classes started by maja.adm in C:\Users\maja.adm\Desktop\Bezbednost_xml\XML_Bezbednost\XML-editFront\XML_PROJEKAT)
-2021-06-12 19:10:03,274 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-06-13 00:01:35,997 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-3] User admin has successfully logged in
+2021-06-13 00:10:15,414 INFO services.authservices.service.implementation.AuthService [http-nio-8090-exec-8] User admin has successfully logged in
